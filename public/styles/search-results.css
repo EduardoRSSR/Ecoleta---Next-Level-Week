@@ -33,7 +33,7 @@
 #page-search-results header a span{
 
     margin-right: 16px;
-    background-image: url('./Assets/icones/arrow-left.svg');
+    background-image: url('/Assets/icones/arrow-left.svg');
 
     
     height: 20px;

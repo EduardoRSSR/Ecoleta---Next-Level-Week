@@ -1,0 +1,32 @@
+{
+  "name": "ecoleta",
+  "version": "1.0.0",
+  "description": "Ecoleta project - NLW1",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduardoRSSR/Ecoleta-Next-Level-Week.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "NLW"
+  ],
+  "author": "Eduardo Rodrigues",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EduardoRSSR/Ecoleta-Next-Level-Week/issues"
+  },
+  "homepage": "https://github.com/EduardoRSSR/Ecoleta-Next-Level-Week#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -2,7 +2,7 @@
 
     height: 100vh;
 
-    background: url('./Assets/icones/home-background.svg') no-repeat;
+    background: url('/Assets/icones/home-background.svg') no-repeat;
     background-position: 35vw bottom;
 }
 
@@ -35,7 +35,7 @@
 #page-home header a span{ 
     
     display: flex;
-    background-image: url('./Assets/icones/log-in.svg');
+    background-image: url('/Assets/icones/log-in.svg');
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -96,7 +96,7 @@ font-size: 54px;
 
 #page-home main a span::after{
     content:"";
-    background-image: url('./Assets/icones/search.svg');
+    background-image: url('/Assets/icones/search.svg');
     width: 20px;
     height: 20px;
 
