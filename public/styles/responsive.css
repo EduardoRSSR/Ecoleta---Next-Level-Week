@@ -1,4 +1,4 @@
-@media (max-width: 900px){
+    @media (max-width: 900px){
     
     #page-home {
         background-position-x: 70vw;
@@ -27,6 +27,15 @@
         grid-template-columns: 1fr;
 
     }
+
+    #page-create-point .field-group{
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field{
+        margin-left: 0;
+    }
+    
 }
 
 @media (min-width: 1700px){
@@ -39,7 +48,7 @@
 @media (max-height: 760px){
 
     #page-home{
-    background-position-y: 200px;
+    background-position-y: 100px;
     }
 
 }

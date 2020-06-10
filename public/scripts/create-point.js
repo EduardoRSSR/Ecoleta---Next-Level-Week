@@ -71,6 +71,7 @@ function clickonItem(event){
     var itemLi = event.target; // item clicado
     var itemId = itemLi.dataset.id;  //id do item clicado
     
+    
     itemLi.classList.toggle("selected"); // adiciona/remove classe selected
     
     // adicionar itens a um vetor para controle
@@ -81,6 +82,7 @@ function clickonItem(event){
     }else{
         selectedItems.splice(`${itemVerify}`,1)
     }
-collectedItems.value=selectedItems;
+
+    collectedItems.value=selectedItems;
 }
 

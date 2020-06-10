@@ -1,44 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.html" %}
+
+{% set pageId = "page-search-results" %}
+
+{% block title %}
     <title>Resultado da pesquisa</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css"> 
-    <link rel="stylesheet" href="/styles/search-results.css"> 
-    <link rel="stylesheet" href="/styles/responsive.css"> 
+{% endblock title %}
 
-</head>
-<body>
-    <div id="page-search-results">
-    
-        {%include "partials/page-header.html"%} <!--incluindo header usando nunjucks-->
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
 
-   
+{% block content %}
+
+    {%include "partials/page-header.html"%}
+    <!--incluindo header usando nunjucks-->
+
     <main>
         <h4>
-            <strong>2 Pontos encontrados:</strong>
+            
+           {% if total == 0 %}
+                <h3><br> Ainda não foram cadastrados pontos de coleta para esse local.<h3>
+            {% endif %}
+            
+            {% if total == 1 %}
+                <strong>{{total}} Ponto</strong> encontrado:
+            {% endif %}
+            
+            {% if total > 1 %} 
+                <strong>{{total}}</strong> Pontos encontrados:
+            {% endif %}
         </h4>
 
         <div class="cards">
-            <div class="card">
-                <img src="./Assets/icones/colectoria.jpg" alt="Colectoria">
-                <h1>Colectoria</h1>
-                <h3>Resíduos Eletrônicos, Lâmpadas </h3>
-                <p>Rio do Sul, Santa Catarina</br>Guilherme Gemballa, Jardim América</br>Nº 260</p>
-            </div>
 
+       {% for place in places %}
             <div class="card">
-                <img src="./Assets/icones/paperside.jpg" alt="Papersider">
-                <h1>Papersider</h1>
-                <h3>Papéis e Papelão</h3>
-                <p>Rio do Sul, Santa Catarina</br>Guilherme Gemballa, Jardim América</br>Nº 260</p>
-            </div>
+                <img src="{{ place.image }}" alt="Colectoria">
+                <h1>{{ place.name }}</h1>
+                <h3> {{ place.items }}</h3>
+                <p>{{place.city}}, {{place.state}}</br>{{place.address}}</br>{{place.address2}}</p>
+           </div>
+       {% endfor %}
+        
+            
+
         </div>
     </main>
-    </div>
-
-</body>
-</html>
+{% endblock content %}
