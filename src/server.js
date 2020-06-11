@@ -1,7 +1,7 @@
 const express = require("express")
 const server = express()
 
-const sequelize = require("sequelize")
+const sequelize = require('sequelize')
 
 const connection = new sequelize('ecoletanlw', 'eduardorodrigues', 'Dudu2020',{
     host: 'mysql669.umbler.com',
