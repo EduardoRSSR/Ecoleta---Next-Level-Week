@@ -3,6 +3,7 @@ const server = express()
 
 //importando banco de dados
 const db = require("./database/db")
+const mysql = require("./database/mysql")
 
 //Configurar pasta public
 server.use(express.static("public"))
