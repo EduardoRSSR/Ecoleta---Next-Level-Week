@@ -24,6 +24,7 @@
   "homepage": "https://github.com/EduardoRSSR/Ecoleta-Next-Level-Week#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mysql2": "^2.1.0",
     "nunjucks": "^3.2.1",
     "sequelize": "^5.21.12",
     "sqlite3": "^4.2.0"
