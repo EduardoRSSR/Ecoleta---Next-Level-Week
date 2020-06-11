@@ -1,15 +1,6 @@
 const express = require("express")
 const server = express()
 
-const sequelize = require('sequelize')
-
-const connection = new sequelize('ecoletanlw', 'eduardorodrigues', 'Dudu2020',{
-    host: 'mysql669.umbler.com',
-    dialect: 'mysql',
-    timezone:"-03:00"
-});
-module.exports=connection;
-
 //importando banco de dados
 const db = require("./database/db")
 
